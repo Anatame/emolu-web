@@ -1,9 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
+
 
 import {useState, useRef} from 'react'
 import CardItem from './components/CardItem'
 import CardList from './components/CardList'
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   
@@ -55,12 +57,20 @@ function App() {
 
   return (
     <div className="App">
-
+      <Navbar />
       {data.length > 0 ? (<CardList data={data} onDelete={deleteCard }/>) : ("No cards yet")}
-      <button onClick={()=> add()}>Add</button>
+      <button className="add" style={styles.add} onClick={()=> add()}>Add</button>
 
     </div>
   );
+}
+
+const styles = {
+  add: {
+     margin: 50,
+     
+  },
+
 }
 
 export default App;

@@ -50,7 +50,8 @@ const styles = {
    item: {
       margin: 20,
       color: 'white',
-   }
+   },
+
 }
 
 export default CardItem;
