@@ -37,6 +37,16 @@ function App() {
         price: 15
       },
       {
+        id: '0',
+        item: 'Apple',
+        price: 15
+        },
+      {
+        id: '0',
+        item: 'Apple',
+        price: 15
+      },
+      {
         id: '1',
         item: 'Banana',
         price: 20

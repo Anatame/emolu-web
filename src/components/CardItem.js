@@ -16,9 +16,13 @@ function CardItem({text, title, id, items, onDelete}) {
             {items.map((item) => <h4 style={styles.item}>{item.item}  {item.price}</h4>)}
             {console.log(items)}
          </div>
-         <button onClick={()=> onDelete(id)}>delete</button>
-
+  
          
+         <div style={styles.bottomContainer}>
+            <h3 style={styles.bottomText}>Spent total - Rs. 150</h3>
+         </div>
+
+         <button onClick={() => onDelete(id)}>delete</button>
       </div>
    );
 }
@@ -26,7 +30,6 @@ function CardItem({text, title, id, items, onDelete}) {
 const styles = {
    container: {
       width: 300,
-      height: 200,
       backgroundColor: 'blue',
       margin: 20,
       border: '1px solid white',
@@ -39,16 +42,27 @@ const styles = {
 
    headText: {
       color: 'white',
+      position: 'relative',
+      left: 15,
+      textAlign: 'start',
    },
 
    itemsContainer: {
       display: 'flex',
       flexWrap: 'wrap',
-      margin: 24
+      justifyContent: 'center'
    },
 
    item: {
       margin: 20,
+      color: 'white',
+   },
+
+   bottomContainer: {
+      borderTop: '1px solid white',
+   },
+   bottomText: {
+      textAlign: 'center',
       color: 'white',
    }
 }
