@@ -17,6 +17,7 @@ function CardItem({text, title, id, items, onDelete}) {
             {console.log(items)}
          </div>
          <button onClick={()=> onDelete(id)}>delete</button>
+      
 
          
       </div>
@@ -26,7 +27,6 @@ function CardItem({text, title, id, items, onDelete}) {
 const styles = {
    container: {
       width: 300,
-      height: 200,
       backgroundColor: 'blue',
       margin: 20,
       border: '1px solid white',
